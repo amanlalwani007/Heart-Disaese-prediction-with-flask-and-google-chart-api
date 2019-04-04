@@ -1,0 +1,90 @@
+<html>
+  <head>
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+	  google.charts.setOnLoadCallback(drawCharttwo);
+	  google.charts.setOnLoadCallback(drawChartthree);
+	  google.charts.setOnLoadCallback(drawChartfour);
+	  google.charts.setOnLoadCallback(drawChartfive);
+      function drawChart() {
+       var data = google.visualization.arrayToDataTable([
+         ['Gender', 'Having heart Disease', { role: 'style' }],
+         ['Male', 60, '#b87333'],            // RGB value
+         ['Female', 25, 'silver'],            // English color name
+         // CSS-style declaration
+      ]);
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data);
+      }
+	  function drawCharttwo() {
+        var data = google.visualization.arrayToDataTable([
+          ['Gender', 'pain type 1', 'pain type 2', 'Pain type 3','pain type 4'],
+          ['female', 0, 9, 9.5,52],
+          ['male', 42, 18, 40,81]
+        ]);
+
+        var options = {
+          
+          bars: 'vertical' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_materialtwo'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+	    function drawChartthree() {
+       var data = google.visualization.arrayToDataTable([
+         ['Gender', 'Having Fast Glucose', { role: 'style' }],
+         ['Male', 64, '#b87333'],            // RGB value
+         ['Female', 48, 'silver'],            // English color name
+         // CSS-style declaration
+      ]);
+        var chart = new google.charts.Bar(document.getElementById('barchart_materialthree'));
+
+        chart.draw(data);
+      }
+	  function drawChartfour() {
+       var data = google.visualization.arrayToDataTable([
+         ['rest ecg', 'Having Heart Disease', { role: 'style' }],
+         ['normal(Type 0)', 48, '#b87333'],            // RGB value
+         ['ST-T wave abnormality(Type 1)', 65, 'silver'],
+         ['left ventricular hyperthropy(Type 2)', 54, 'silver'],		 // English color name
+         // CSS-style declaration
+      ]);
+        var chart = new google.charts.Bar(document.getElementById('barchart_materialfour'));
+
+        chart.draw(data);
+      }
+	  function drawChartfive() {
+       var data = google.visualization.arrayToDataTable([
+         ['type', 'Having heart Disease', { role: 'style' }],
+         ['Having Exercise Induced Angina(1)', 82, '#b87333'],            // RGB value
+         ['Not having exercise induced angina(0)', 25, 'silver'],            // English color name
+         // CSS-style declaration
+      ]);
+        var chart = new google.charts.Bar(document.getElementById('barchart_materialfive'));
+
+        chart.draw(data);
+      }
+
+
+    </script>
+  </head>
+  <body>
+  <br><br>
+	<p align="center" style="font-family: 'Anton', sans-serif;">Heart Disaese according to Gender</p><br><br>
+    <div id="barchart_material" style="width: 900px; height: 500px;"></div><br><br><br>
+	<p align="center" style="font-family: 'Anton', sans-serif;">chest pain type according to Gender</p><br><br>
+    <div id="barchart_materialtwo" style="width: 900px; height: 500px;"></div><br><br><br>
+	<p align="center" style="font-family: 'Anton', sans-serif;">fast Glucose according to Gender</p><br><br>
+    <div id="barchart_materialthree" style="width: 900px; height: 500px;"></div><br><br><br>
+	<p align="center" style="font-family: 'Anton', sans-serif;">Heart Disaese according to rest ecg type</p><br><br>
+    <div id="barchart_materialfour" style="width: 900px; height: 500px;"></div><br><br><br>
+	<p align="center" style="font-family: 'Anton', sans-serif;">Heart Disaese according to exercise induced engina</p><br><br>
+    <div id="barchart_materialfive" style="width: 900px; height: 500px;"></div><br><br><br>
+  </body>
+</html>

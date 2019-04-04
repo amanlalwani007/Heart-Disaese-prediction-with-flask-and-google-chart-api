@@ -1,0 +1,73 @@
+<html><head>
+<title>Heart Disease Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Mukta|Raleway|Ubuntu|Sniglet" rel="stylesheet"> 
+  </head>
+  
+<body background="/static/heart.jpg" height="100%" style="background-position:center ;background-size:cover">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html" style="font-family: 'Sniglet', sans-serif">Heart Checker</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html" style="font-family: 'Sniglet', sans-serif">Home</a></li>
+      <li style="font-family: 'Sniglet', sans-serif"><a href="https://www.1mg.com/">1 mg</a></li>
+      <li style="font-family: 'Sniglet', sans-serif"><a href="https://pharmeasy.in/">PharmEasy</a></li>
+      <li style="font-family: 'Sniglet', sans-serif"><a href="https://www.practo.com/consult">Practo</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+<form class="form-horizontal" action="http://localhost:5000/login" method="post">
+<div class="form-group">
+    <label  style="color:white;font-family: 'Sniglet', sans-serif;font-size:20px">AGE :-</label>
+    <input type="tel" class="form-control" style="background:transparent;color:white;border:none;" name="age" align="center" placeholder="enter valid age in numbers" />
+ </div>
+<div class="form-group">
+    <label  style="color:white;font-family: 'Sniglet', sans-serif;font-size:20px">SEX :-</label>
+    <input type="tel" style="background:transparent;color:white;border:none" class="form-control"  name="sex" align="center" placeholder="enter 1 for male and 0 for female" />
+ </div>
+
+<div class="form-group">
+    <label  style="color:white;font-family: 'Sniglet', sans-serif;font-size:20px">CHEST PAIN :-</label>
+    <input type="tel" style="background:transparent;color:white;border:none" class="form-control"  name="chest_pain_type" align="center" placeholder="enter 1 for typical angina and 2 for atypical angina and 3 for non anginal pain and 4 for asymtotic" />
+ </div>
+<div class="form-group">
+    <label  style="color:white;font-family: 'Sniglet', sans-serif;font-size:20px">BLOOD PRESSURE :-</label>
+    <input type="tel" style="background:transparent;color:white;border:none;" class="form-control"  name="resting_blood_pressure" align="center" placeholder="enter valid blood pressure between 70 and 190" />
+ </div>
+<div class="form-group">
+    <label  style="color:white;font-family: 'Sniglet', sans-serif;font-size:20px">SERUM CHOLESTROL :-</label>
+    <input type="tel" style="background:transparent;color:white;border:none;" class="form-control"  name="serum_cholestrol" align="center" placeholder="enter valid cholestrol in numbers(mg/dL) " />
+ </div>
+<div class="form-group">
+    <label  style="color:white;font-family: 'Sniglet', sans-serif;font-size:20px">FASTING BLOOD SUGAR :-</label>
+    <input type="tel" style="background:transparent;color:white;border:none;" class="form-control"  name="fasting_blood_sugar" align="center" placeholder="enter 1 if blood sugar>120 otherwise enter 0" />
+ </div>
+<div class="form-group">
+    <label  style="color:white;font-family: 'Sniglet', sans-serif;font-size:20px">RESTING ECG :-</label>
+    <input type="tel" style="background:transparent;color:white;border:none;" class="form-control"  name="resting_ecg" align="center" placeholder="enter 0=normal 1=having st-T abnormality 2=left ventricular therapy" />
+ </div>
+<div class="form-group">
+    <label  style="color:white;font-family: 'Sniglet', sans-serif;font-size:20px">HEART RATE :-</label>
+    <input type="tel" style="background:transparent;color:white;border:none;" class="form-control"  name="heart_rate" align="center" placeholder="enter heart rate" />
+ </div> 
+<div class="form-group">
+    <label  style="color:white;font-family: 'Sniglet', sans-serif;font-size:20px">EXERCISE INDUCED ANGINA :-</label>
+    <input type="tel" style="background:transparent;color:white;border:none;" class="form-control"  name="exercise_induced_angina" align="center" placeholder="enter 1 for yes or 0 for no" />
+ </div>
+<div class="form-group">
+    <label  style="color:white;font-family: 'Sniglet', sans-serif;font-size:20px">DEPRESSION :-</label>
+    <input type="tel" style="background:transparent;color:white;border:none;" class="form-control"  name="depression" align="center" placeholder="enter st depression" />
+ </div>
+<p align="center"><input type="submit" style="align:center" class="btn btn-info" value="submit"/></p>
+</form>
+</div>
+
+</body>
+</html>
